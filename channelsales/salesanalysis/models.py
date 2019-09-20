@@ -23,6 +23,8 @@ class Sales(models.Model):
         select_fields = kwargs.get('select')
         group_fields = kwargs.get('group')
         order_fields = kwargs.get('order')
+
+        # A generic query to do select, filter, group by and order by operations
         try:
             objs = cls.objects.filter(**filter_fields).values(*group_fields).annotate(**select_fields).order_by(order_fields)
             return objs
