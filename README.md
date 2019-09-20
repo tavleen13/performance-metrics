@@ -8,6 +8,7 @@ A django application to fetch a given performance metrics data from a Relational
 # API UseCases with Endpoints
 
 1. Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order
+
  /sales?search=total_clicks,total_impressions&filterBy=date__lte=2017-06-01&groupBy=channel,country&orderBy=clicks,desc
 
 2. Show the number of installs that occurred in May of 2017 on iOS, broken down by date, sorted by date in ascending order.
